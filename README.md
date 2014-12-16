@@ -70,7 +70,7 @@ Now run the server using the JAR and the server YAML configuration:
 $ java -jar target/venuehireapp-1.0-SNAPSHOT.jar server venue-service.yml
 ```
 
-All being well, the web application should now be accessible at [http://localhost:8080/index.htm](http://localhost:8080/index.html). The RESTful API may also be accessed - e.g. all venues [http://localhost:8080/api/venue](http://localhost:8080/api/venue).
+All being well, the web application should now be accessible at [http://localhost:8080/index.html](http://localhost:8080/index.html). The RESTful API may also be accessed - e.g. all venues [http://localhost:8080/api/venue](http://localhost:8080/api/venue).
 
 Disclaimer
 ----------

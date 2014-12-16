@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" ng-app="VenueSearch">
+<head>
+  <meta charset="utf-8">
+  <title>Bristol City Council Community Venues</title>
+  <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="SearchCtrl">
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+	<div class="navbar-header">
+	<a class="navbar-brand" href="#">Community Venue Search</a>
+    </div>
+    </div>
+</div>
+<div class="container" ng-view>
+    <section class="searchField">
+        <form ng-submit="search()">
+            <input type="text" ng-model="searchTerm">
+            <input type="submit" value="Search by text">
+        </form>
+        <form ng-submit="searchbyPostcode()">
+            <input type="text" ng-model="postcode">
+            <input type="submit" value="Search by postcode">
+        </form>
+    </section>
+    <section class="results">
+        <article class="venue" ng-repeat="venue in venues" ng-cloak>
+            <h2>
+                {{venue.name}}
+            </h2>
+            <p ng-repeat="line in venue.address">{{ line }}</p>
+        </article>
+    </section>
+</div>
+
+
+</body>
+</html>
